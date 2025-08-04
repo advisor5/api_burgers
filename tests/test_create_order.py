@@ -46,8 +46,7 @@ class TestRegisterUser:
     @allure.title("Тест создания заказа без авторизации")
     @allure.description(
         "Проверка: при создании заказа без авторизаци в теле ответа вернется \
-        'success: false'. Здесь намеренный баг, изменить нет возможности, \
-        т.к. нет доступа к разработке поэтому ожидаемый результат именен на 'True'"
+        'success: false'"
     )
     def test_not_auth_user_create_order_return_success_false(self, register_rand_user):
 
