@@ -1,5 +1,8 @@
+from os import getenv
+
+
 class Url:
-    HOST = "https://stellarburgers.nomoreparties.site/"
+    HOST = getenv('HOST')
 
 class UserAPI:
     AUTH_REG = "api/auth/register"
