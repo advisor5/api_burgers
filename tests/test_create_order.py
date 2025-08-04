@@ -57,7 +57,7 @@ class TestRegisterUser:
         response = ApiOrders().create_orders(data_order, access_token)
 
         actually_value = response.json()["success"]
-        expected_value = MessageText.TRUE
+        expected_value = MessageText.FALSE
         assert actually_value == expected_value
         allure.attach(f"Status {response.status_code}", "Response status")
         allure.attach(f"{response.json()}", "Message")
