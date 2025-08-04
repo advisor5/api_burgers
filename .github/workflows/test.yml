@@ -1,4 +1,4 @@
-name: API tests
+name: api_burgers
 
 on:
   push:
