@@ -1,0 +1,1 @@
+{'success': True, 'accessToken': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTBkM2JkOWVkMjgwMDAxYjY2ZDllZiIsImlhdCI6MTc1NDMyMTg1NCwiZXhwIjoxNzU0MzIzMDU0fQ.bG_fUbxK0KCSZNXzact8gQ3eAvseKxS8b-YOzgMK_Qc', 'refreshToken': '5e4c23294f43a14423564fddd4076e31bea72d7bb2fc9dd763ba44ff3d16710571d4cd82ebbf1f87', 'user': {'email': 'zqllpchyfz@yandex.ru', 'name': 'Obi'}}
