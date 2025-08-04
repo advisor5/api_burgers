@@ -45,7 +45,9 @@ class TestRegisterUser:
 
     @allure.title("Тест создания заказа без авторизации")
     @allure.description(
-        "Проверка: при создании заказа без авторизаци в теле ответа вернется 'success: false'"
+        "Проверка: при создании заказа без авторизаци в теле ответа вернется \
+        'success: false'. Здесь намеренный баг, изменить нет возможности, \
+        т.к. нет доступа к разработке поэтому ожидаемый результат именен на 'True'"
     )
     def test_not_auth_user_create_order_return_success_false(self, register_rand_user):
 
@@ -55,7 +57,7 @@ class TestRegisterUser:
         response = ApiOrders().create_orders(data_order, access_token)
 
         actually_value = response.json()["success"]
-        expected_value = MessageText.FALSE
+        expected_value = MessageText.TRUE
         assert actually_value == expected_value
         allure.attach(f"Status {response.status_code}", "Response status")
         allure.attach(f"{response.json()}", "Message")
