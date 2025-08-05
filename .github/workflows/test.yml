@@ -27,11 +27,10 @@ jobs:
             python -m pip install --upgrade pip
             pip install poetry
             poetry install
-      
-      - name: Export HOST env
-        run: echo "HOST=${{ secrets.HOST }}" >> $GITHUB_ENV
-
+            
       - name: Run API tests with pytest and generate Allure results # Запуск тестов
+        env:
+          HOST: ${{ secrets.HOST }}
         run:
             poetry run pytest --alluredir=allure-results
         # Запускаем тесты с меткой "regression"
