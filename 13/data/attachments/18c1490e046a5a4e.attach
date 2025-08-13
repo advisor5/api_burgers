@@ -1,0 +1,1 @@
+{'success': True, 'accessToken': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWNiMWRhOWVkMjgwMDAxYjY3YTdmNiIsImlhdCI6MTc1NTA5OTYxMSwiZXhwIjoxNzU1MTAwODExfQ.i3cTTXEvt_Pjd_p_-3l47eT5_ra23SEqGCfVeibkq80', 'refreshToken': 'a3dc764398468bf93930205c664b2e69fbc3f20a8fa96b1ad7638db4d98e9f68f0d73ea20a4fcccc', 'user': {'email': 'dayhetwbko@yandex.ru', 'name': 'Obi'}}
