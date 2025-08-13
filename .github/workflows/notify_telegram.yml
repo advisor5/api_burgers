@@ -8,7 +8,7 @@ on:
 
 jobs:
   notify:
-    if: ${{ startsWith(github.head_ref, 'test/') }}
+    if: ${{ startsWith(github.head_ref, 'feature/') }}
     runs-on: ubuntu-latest
 
     steps:
