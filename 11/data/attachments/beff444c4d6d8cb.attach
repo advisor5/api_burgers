@@ -1,0 +1,1 @@
+{'success': True, 'accessToken': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWNhODBkOWVkMjgwMDAxYjY3YTUwYSIsImlhdCI6MTc1NTA5NzEwMiwiZXhwIjoxNzU1MDk4MzAyfQ.i-SHx5nNFYh57x8zlWtDvJ2YjsD4VnwJtvYZUrIANWE', 'refreshToken': '70d5d48fb9e995397533f613775f03cd1c9abc491be81e4e9d60529faf4e79bfcfd1c3cbf356a3da', 'user': {'email': 'xnvtaljpgz@yandex.ru', 'name': 'Obi'}}
