@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"ПЕсли выполнить запрос без авторизации, вернётся код ответа 401 Unauthorized","378","Тест получения заказов неавторизованного пользователя","tests","Wed Aug 13 17:28:54 GMT 2025","passed","Wed Aug 13 17:28:55 GMT 2025","TestRegisterUser","test_get_orders_user","",""
+"При успешном подключении бэкенд вернёт максимум        50 последних заказов пользователя","1230","Тест получения заказов автризованного пользователя","tests","Wed Aug 13 17:28:52 GMT 2025","passed","Wed Aug 13 17:28:54 GMT 2025","TestRegisterUser","test_get_orders_user","",""
