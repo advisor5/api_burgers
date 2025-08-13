@@ -15,7 +15,8 @@ jobs:
 
     steps:
       - name: Check out repository # Клонирование кода репозитория в среду CI/CD
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4 # Действие checkout извлекает код вашего
+        # репозитория из исполняющего устройства, чтобы рабочий процесс мог получить к нему доступ. 
 
       - name: Set up Python  # Установка Python
         uses: actions/setup-python@v5
