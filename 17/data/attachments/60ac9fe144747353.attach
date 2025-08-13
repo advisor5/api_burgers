@@ -1,0 +1,1 @@
+{'success': True, 'accessToken': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWNjNjQxOWVkMjgwMDAxYjY3YWIyMyIsImlhdCI6MTc1NTEwNDgzNCwiZXhwIjoxNzU1MTA2MDM0fQ.FK2rD2qkaRvmsvsyoQqGDx0evaBNhWVcftAzxGMyPsk', 'refreshToken': '687fceea7f871f1529076180847954229197862e2dc705d22867898b227ce1bc4d856cacc1091f48', 'user': {'email': 'lcbhddcofe@yandex.ru', 'name': 'Obi'}}
