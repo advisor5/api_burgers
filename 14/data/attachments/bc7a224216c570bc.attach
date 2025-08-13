@@ -1,0 +1,1 @@
+{'success': True, 'accessToken': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWNjMGIzOWVkMjgwMDAxYjY3YWE0ZCIsImlhdCI6MTc1NTEwMzQxMiwiZXhwIjoxNzU1MTA0NjEyfQ.Yuq_dggscF46ebfJ5iM0pr7PDRP-3Fon5P_Su2wL5Ec', 'refreshToken': '7959ef37581827eaf72fcfb76b09ecf972d9959d2c705a91abde5a08521851a7048b295c68db3667', 'user': {'email': 'geoxkpuees@yandex.ru', 'name': 'Obi'}}
