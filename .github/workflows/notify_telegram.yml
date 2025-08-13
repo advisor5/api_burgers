@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Send telegram message
-        uses: appleboy/telegram-action@develop
+        uses: appleboy/telegram-action@master
         with:
           to: ${{secrets.TELEGRAM_TO}}
           token: ${{secrets.TELEGRAM_TOKEN}}
