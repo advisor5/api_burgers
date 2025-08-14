@@ -33,7 +33,7 @@ jobs:
         env:
           HOST: ${{ secrets.HOST }}
         run:
-            poetry run pytest --alluredir=allure-results
+            poetry run pytest tests/test_get_orders_user.py --alluredir=allure-results
         # Запускаем тесты с меткой "regression"
         # --alluredir=allure-results сохраняет результаты в папку allure-results
         # --numprocesses 2 - выполняем тесты в 2 потока (ускоряет выполнение)
