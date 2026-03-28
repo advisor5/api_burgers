@@ -1,0 +1,15 @@
+name: DevSecOps
+
+on:
+  push:
+    branches:
+      - [feature/devsecops]
+
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v4
+    - name: Install and run bandit
+      run: |
+        pip install bandit
+        bandit -r . -ll
