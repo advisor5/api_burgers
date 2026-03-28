@@ -3,7 +3,7 @@ name: DevSecOps
 on:
   push:
     branches:
-      - [feature/devsecops]
+      - feature/devsecops
 
 jobs:
   run-bandit:
