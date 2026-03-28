@@ -10,7 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install and run bandit
-        run: |
-          pip install bandit
-          bandit -r . -ll --exit-zero
+
+      - name: Install bandit
+        run: pip install bandit
+
+      - name: SAST - блокировать HIgh severity
+        run: bandit -r . --lll
+
+      - name: SAST - предупреждение Medium и Low
+        run: bandit -r . -ll --exit-zero
