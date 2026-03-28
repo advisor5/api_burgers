@@ -17,5 +17,5 @@ jobs:
       - name: SAST - блокировать HIgh severity
         run: bandit -r . -lll
 
-      - name: SAST - предупреждение Medium и Low
-        run: bandit -r . -ll --exit-zero
+      - name: SAST - блокировать Medium и Low
+        run: bandit -r . -ll
