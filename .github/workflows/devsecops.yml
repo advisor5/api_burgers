@@ -1,8 +1,0 @@
-stsges:
-  - sast
-
-bandit:
-  stage: sast
-  script:
-    - pip install bandit
-    - bandit -r . -ll
