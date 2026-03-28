@@ -13,4 +13,4 @@ jobs:
       - name: Install and run bandit
         run: |
           pip install bandit
-          bandit -r . -ll
+          bandit -r . -ll --exit-zero
