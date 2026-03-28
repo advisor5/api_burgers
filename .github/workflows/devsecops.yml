@@ -15,7 +15,7 @@ jobs:
         run: pip install bandit
 
       - name: SAST - блокировать HIgh severity
-        run: bandit -r . --lll
+        run: bandit -r . -lll
 
       - name: SAST - предупреждение Medium и Low
         run: bandit -r . -ll --exit-zero
