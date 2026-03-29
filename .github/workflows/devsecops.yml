@@ -1,0 +1,28 @@
+name: Scan bandit
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+  push:
+    branches:
+      - "**"
+
+  workflow_dispatch:
+
+jobs:
+  run-bandit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install bandit
+        run: pip install bandit
+
+      - name: SAST проверка на HIGH
+        run: bandit -r . -lll
+
+      - name: SAST проверка на LOW, MIDLE
+        run: bandit -r . -ll --exit-zero

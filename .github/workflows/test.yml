@@ -7,6 +7,8 @@ on:
   pull_request:
     branches: [main, develop]
 
+  workflow_dispatch:
+
 jobs:
   run-tests:
     runs-on: ubuntu-latest
@@ -14,24 +16,23 @@ jobs:
     steps:
       - name: Check out repository # Клонирование кода репозитория в среду CI/CD
         uses: actions/checkout@v4 # Действие checkout извлекает код вашего
-        # репозитория из исполняющего устройства, чтобы рабочий процесс мог получить к нему доступ. 
+        # репозитория из исполняющего устройства, чтобы рабочий процесс мог получить к нему доступ.
 
-      - name: Set up Python  # Установка Python
+      - name: Set up Python # Установка Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13.3' # Используем Python версии 3.13.3
+          python-version: "3.13.3" # Используем Python версии 3.13.3
 
-      - name: Install dependencies  # Установка зависимостей проекта
+      - name: Install dependencies # Установка зависимостей проекта
         run: |
-            python -m pip install --upgrade pip
-            pip install poetry
-            poetry install
-            
+          python -m pip install --upgrade pip
+          pip install poetry
+          poetry install
+
       - name: Run API tests with pytest and generate Allure results # Запуск тестов
         env:
           HOST: ${{ secrets.HOST }}
-        run:
-            poetry run pytest tests/test_get_orders_user.py --alluredir=allure-results
+        run: poetry run pytest tests/test_get_orders_user.py --alluredir=allure-results
         # Запускаем тесты с меткой "regression"
         # --alluredir=allure-results сохраняет результаты в папку allure-results
         # --numprocesses 2 - выполняем тесты в 2 потока (ускоряет выполнение)
@@ -46,7 +47,7 @@ jobs:
 
   publish-report: # Джоба для публикации Allure-отчета на GitHub Pages
     if: always()
-    needs: [ run-tests ] # Выполняется только после успешного выполнения run-tests
+    needs: [run-tests] # Выполняется только после успешного выполнения run-tests
     runs-on: ubuntu-latest # Используем последнюю версию Ubuntu
 
     steps:
@@ -56,18 +57,18 @@ jobs:
           ref: gh-pages # Операции будем выполнять в ветке gh-pages
           path: gh-pages # Клонируем файлы в папку gh-pages
 
-      - name: Download Allure results  # Загружаем ранее сохраненные результаты тестов
+      - name: Download Allure results # Загружаем ранее сохраненные результаты тестов
         uses: actions/download-artifact@v4
         with:
           name: allure-results # Название артефакта
           path: allure-results # Путь для скачивания
 
       - name: Allure Report action from marketplace # Генерация отчета Allure
-        uses: simple-elf/allure-report-action@v1.12
+        uses: simple-elf/allure-report-action@v1.13
         if: always()
         with:
           allure_results: allure-results # Папка с результатами тестов
-          allure_history: allure-history  # Папка для хранения истории отчетов
+          allure_history: allure-history # Папка для хранения истории отчетов
 
       - name: Deploy report to Github Pages # Публикация отчета на GitHub Pages
         if: always()
