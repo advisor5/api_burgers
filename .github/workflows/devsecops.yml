@@ -6,9 +6,10 @@ on:
       - develop
 
   push:
-    workflow_dispatch:
     branches:
       - "**"
+
+  workflow_dispatch:
 
 jobs:
   run-bandit:
