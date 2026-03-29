@@ -5,6 +5,10 @@ on:
     branches:
       - develop
 
+  push:
+    branches:
+      - "**"
+
 jobs:
   run-bandit:
     runs-on: ubuntu-latest
