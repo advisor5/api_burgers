@@ -6,6 +6,7 @@ on:
       - develop
 
   push:
+    workflow_dispatch:
     branches:
       - "**"
 
