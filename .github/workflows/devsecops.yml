@@ -40,5 +40,5 @@ jobs:
         run: trivy fs . --scanners vuln --exit-code 1 --severity MEDIUM,HIGH,CRITICAL
 
       - name: SCA - Trivy scan secrets only
-        if: allways()
+        if: always()
         run: trivy fs . --scanners secret --exit-code 1
