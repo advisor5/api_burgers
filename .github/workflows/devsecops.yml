@@ -26,3 +26,15 @@ jobs:
 
       - name: SAST проверка на LOW, MIDLE
         run: bandit -r . -ll --exit-zero
+
+    run-trivy:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout Code
+          uses: actions/checkout@v4
+
+        - name: Install Trivy
+          run: apt-get install -y trivy
+
+        - name: SCA - run Trivy
+          uses: trivy fs .
